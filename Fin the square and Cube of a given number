@@ -1,0 +1,10 @@
+def square_and_cube(n):
+    square = n ** 2
+    cube = n ** 3
+    return square, cube
+
+# Example usage
+num = float(input("Enter a number: "))
+sq, cu = square_and_cube(num)
+print(f"Square of {num} is: {sq}")
+print(f"Cube of {num} is: {cu}")
