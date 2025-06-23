@@ -1,0 +1,18 @@
+import statistics
+
+def calculate_stats(numbers):
+    mean = statistics.mean(numbers)
+    median = statistics.median(numbers)
+    try:
+        mode = statistics.mode(numbers)
+    except statistics.StatisticsError:
+        mode = "No unique mode"
+    
+    print(f"Mean   : {mean}")
+    print(f"Median : {median}")
+    print(f"Mode   : {mode}")
+
+# Example usage
+data = input("Enter numbers separated by spaces: ")
+numbers = list(map(float, data.split()))
+calculate_stats(numbers)
