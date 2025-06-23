@@ -1,0 +1,7 @@
+def decimal_to_binary(n):
+    return bin(n)[2:]  # Remove the '0b' prefix
+
+# Example usage
+decimal = int(input("Enter a decimal number: "))
+binary = decimal_to_binary(decimal)
+print(f"Binary representation: {binary}")
