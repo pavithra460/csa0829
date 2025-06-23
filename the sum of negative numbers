@@ -1,0 +1,12 @@
+def sum_negative_numbers():
+    total = 0
+    while True:
+        num = int(input("Enter a number (-1 to stop): "))
+        if num == -1:
+            break
+        if num < 0:
+            total += num
+    print(f"Sum of negative numbers: {total}")
+
+# Run the function
+sum_negative_numbers()
