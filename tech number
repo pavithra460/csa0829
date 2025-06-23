@@ -1,0 +1,20 @@
+def is_tech_number(num):
+    num_str = str(num)
+    length = len(num_str)
+
+    if length % 2 != 0:
+        return False  # Not a Tech Number (odd number of digits)
+
+    first_half = int(num_str[:length // 2])
+    second_half = int(num_str[length // 2:])
+    sum_parts = first_half + second_half
+
+    return sum_parts * sum_parts == num
+
+# Example usage:
+number = int(input("Enter a number: "))
+
+if is_tech_number(number):
+    print(f"{number} is a Tech Number.")
+else:
+    print(f"{number} is NOT a Tech Number.")
