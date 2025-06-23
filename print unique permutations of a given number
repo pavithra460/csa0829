@@ -1,0 +1,14 @@
+from itertools import permutations
+
+def unique_permutations(num):
+    num_str = str(num)
+    perms = set(permutations(num_str))  # Use set to remove duplicates
+    unique_nums = sorted([''.join(p) for p in perms])
+    
+    print("Unique permutations:")
+    for p in unique_nums:
+        print(p)
+
+# Example usage
+number = input("Enter a number: ")
+unique_permutations(number)
