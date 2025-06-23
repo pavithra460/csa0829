@@ -1,0 +1,23 @@
+def find_two_largest(arr):
+    if len(arr) < 2:
+        return "Need at least two elements"
+
+    first = second = float('-inf')  # Initialize with very small numbers
+
+    for num in arr:
+        if num > first:
+            second = first
+            first = num
+        elif num > second and num != first:
+            second = num
+
+    if second == float('-inf'):
+        return "All elements are the same or no second largest"
+    return first, second
+
+# Example usage
+data = input("Enter numbers separated by spaces: ")
+arr = list(map(int, data.split()))
+
+result = find_two_largest(arr)
+print("Result:", result)
