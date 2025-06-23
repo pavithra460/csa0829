@@ -1,0 +1,21 @@
+#def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5)+1):
+        if num % i == 0:
+            return False
+    return True
+
+def primes_in_range(M, N):
+    prime_list = []
+    for num in range(M, N+1):
+        if is_prime(num):
+            prime_list.append(num)
+    return prime_list
+
+# Example usage:
+M = int(input("Enter the starting number (M): "))
+N = int(input("Enter the ending number (N): "))
+
+prime_numbers = primes_in_range(M, N)
+print(f"Prime numbers between {M} and {N}: {prime_numbers}")
