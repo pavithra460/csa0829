@@ -1,0 +1,11 @@
+def find_rth_smallest(lst, r):
+    if r <= 0 or r > len(lst):
+        return "Invalid value of R"
+    sorted_list = sorted(lst)
+    return sorted_list[r - 1]
+
+# Example usage
+numbers = [12, 5, 7, 3, 9, 1]
+r = 3
+result = find_rth_smallest(numbers, r)
+print(f"The {r}rd smallest element is: {result}")
