@@ -1,0 +1,12 @@
+def sum_of_elements(lst):
+    total = 0
+    for num in lst:
+        total += num
+    return total
+
+# Example usage
+numbers = [10, 20, 30, 40, 50]
+total_sum = sum_of_elements(numbers)
+
+print("Original List:", numbers)
+print("Sum of Elements:", total_sum)
