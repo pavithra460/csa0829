@@ -1,0 +1,15 @@
+def print_repeated_elements(arr):
+    freq = {}
+    repeated = []
+
+    for item in arr:
+        freq[item] = freq.get(item, 0) + 1
+
+    print("Repeated elements in the array:")
+    for key, value in freq.items():
+        if value > 1:
+            print(key)
+
+# Example usage
+arr = [4, 2, 4, 5, 2, 3, 1, 4, 3]
+print_repeated_elements(arr)
