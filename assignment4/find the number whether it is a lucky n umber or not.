@@ -1,0 +1,21 @@
+def is_lucky(n):
+    nums = list(range(1, n + 50))  # generate enough numbers
+    i = 1  # start from index 1 (means 2nd number)
+
+    while i < len(nums):
+        step = nums[i]
+        if step == 0:
+            break
+        nums = [nums[j] for j in range(len(nums)) if (j + 1) % step != 0]
+        i += 1
+
+    return n in nums
+
+# Input
+num = int(input("Enter a number: "))
+
+# Check and output
+if is_lucky(num):
+    print(num, "is a Lucky Number.")
+else:
+    print(num, "is NOT a Lucky Number.")
