@@ -1,0 +1,13 @@
+import math
+
+# Input number
+num = int(input("Enter a number: "))
+
+# Calculate square root
+sqrt = math.isqrt(num)
+
+# Check if square of the square root is equal to the number
+if sqrt * sqrt == num:
+    print(f"{num} is a perfect square.")
+else:
+    print(f"{num} is NOT a perfect square.")
