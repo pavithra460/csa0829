@@ -1,0 +1,23 @@
+def count_rotations(arr):
+    low = 0
+    high = len(arr) - 1
+
+    while low < high:
+        mid = (low + high) // 2
+
+        if arr[mid] > arr[high]:
+            low = mid + 1
+        elif arr[mid] < arr[high]:
+            high = mid
+        else:
+            high -= 1  # Handle duplicates
+
+    return low  # Index of smallest element = number of rotations
+
+# Input
+nums = list(map(int, input("Enter rotated sorted array (space-separated): ").split()))
+
+# Output
+rotations = count_rotations(nums)
+print("The array is rotated", rotations, "time(s).")
+
